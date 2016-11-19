@@ -48,7 +48,7 @@ void loop() {
     }
     // if it's an L (ASCII 76) turn off the LED:
     if (incomingByte == 'B') {
-      Serial.println('L');
+      Serial.println('B');
       digitalWrite(ledPin, HIGH);
       delay(33);
       digitalWrite(ledPin, LOW);

@@ -5,14 +5,17 @@ from pythonosc import dispatcher
 from pythonosc import osc_server
 
 
+def write_serial(letter):
+    if SERIAL:
+        arduino.write(letter)
+
 def blink_handler(unused_addr, args, blink):
     print("Blink: {}".format(blink))
-    ser.write('B')
-
+    write_serial('B')
 
 def jaw_handler(unused_addr, args, jaw):
     print("Jaw Clench: {}".format(jaw))
-    ser.write('J')
+    write_serial('J')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -29,6 +32,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.serial:
+        SERIAL = True
         arduino = serial.Serial(args.serial)
 
     dispatcher = dispatcher.Dispatcher()
