@@ -16,6 +16,9 @@ An outline of the project flow:
 -   Install [Muse SDK](http://developer.choosemuse.com/research-tools/getting-started)
 -   Install [Arduino IDE](https://www.arduino.cc/en/Main/Software)
 -   Requres Python 3
+    -   python3 -m venv venv-muse
+    -   source venv-muse/bin/activate
+    -   pip install -r requirements.txt
 
 
 ## Starting
