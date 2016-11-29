@@ -32,11 +32,15 @@ An outline of the project flow:
 
 -   connect muse device to bluetooth
 -   run muse-io to get started.
--   For linux users, this is done by running: `./muse-io --device <mac-address> --osc osc.udp://localhost:5000`
+    -   For linux users, this is done by running: `./muse-io --device <mac-address> --osc osc.udp://localhost:5000`
     -   This starts the muse-io server, it is streaming data on port 5000.
 -   If you installed MuseLab (which you probably did if you have `muse-io`, you can quickly check the status of your signal)
+-   You should see the muse-io stats for the Muse device. This gives an overview, in real-time, of the connection quality, battery life, and other metrics of the Muse EEG device.
+
 -   You can now run the `blink.py` script.
 -   `blink.py`, by default, does not assume a serial connection with an arduino. Passing the `--serial <port>` argument to the `blink.py` script will setup a serial connection with an _already_ connected arduino device.
 -   other default assumptions are that you are streaming osc udp packets on localhost:5000
 -   However, if, for some reason you aren't doing the default, you _can_ change the server and port configuration by passing `--ip <ip_address>` and `--port <port_number>` arguments to `blink.py`
+    -   Run `blink.py` like this `python3 blink.py`
+    -   Or, if connected to an Arduino `python3 blink.py --serial /dev/ttyACM0`
 
