@@ -26,7 +26,7 @@ An outline of the project flow:
 ### Arduino
 
 -   Load the `led_blink.ino` onto your Arduino
--   record Arduino port name e.g. `/dev/ttyS0`
+-   record Arduino port name e.g. `/dev/ttyACM0`
 
 ### Muse
 
@@ -36,4 +36,7 @@ An outline of the project flow:
     -   This starts the muse-io server, it is streaming data on port 5000.
 -   If you installed MuseLab (which you probably did if you have `muse-io`, you can quickly check the status of your signal)
 -   You can now run the `blink.py` script.
+-   `blink.py`, by default, does not assume a serial connection with an arduino. Passing the `--serial <port>` argument to the `blink.py` script will setup a serial connection with an _already_ connected arduino device.
+-   other default assumptions are that you are streaming osc udp packets on localhost:5000
+-   However, if, for some reason you aren't doing the default, you _can_ change the server and port configuration by passing `--ip <ip_address>` and `--port <port_number>` arguments to `blink.py`
 
