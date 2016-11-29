@@ -2,7 +2,7 @@
 
 This code was written to demo how easy it is to integrate a mobile, consumer-grade EEG device with an Arduino microcontroller.
 
-This demo requires basic skills in hardware and intermediate skills in software development, you should be able to run a python3 script on your computer, and load an arduino script to an Arduino microcontroller.
+This demo requires basic skills in hardware and intermediate skills in software development, you should be able to run a python3 script on your computer, and load an arduino script to an Arduino microcontroller. I did all of this on a Lenovo laptop running Fedora 24. I have never owned a Mac, and quit Windows as a kid. So if you're running linux I am more than willing to help debug. But if you are running Mac or Windows, I won't be able to offer much assistance.
 
 An outline of the project flow:
 -   upload script to arduino
@@ -32,7 +32,7 @@ An outline of the project flow:
 
 *Step 1*: Connect Muse EEG device to computer, and keep track of MAC Address.
 
--   This may be tricky on Apple products. I'm not sure if there is an easy way to find it.
+-   This may be tricky on Apple products. Perhaps opening up a terminal and typing `system_profiler SPBluetoothDataType` will do the trick. 
 
 *Step 2*: Start `muse-io` with `--device` and `--osc` flags
 
