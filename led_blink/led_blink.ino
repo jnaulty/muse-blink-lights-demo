@@ -39,42 +39,29 @@ void loop() {
     // read the oldest byte in the serial buffer:
     incomingByte = Serial.read();
     // if it's a capital H (ASCII 72), turn on the LED:
-    if (incomingByte == 'G') {
-      Serial.println('G');
+    if (incomingByte == 'J') {
+      Serial.println('J');
+      for (int i=0; i <=2; i++){
+      //Serial.println("Jaw Clenching ");
       digitalWrite(ledPin, HIGH);
-      delay(25);
+      delay(300);
       digitalWrite(ledPin, LOW);
-      delay(25);
+      delay(300);
+      }
     }
     // if it's an L (ASCII 76) turn off the LED:
     if (incomingByte == 'B') {
       Serial.println('B');
-      digitalWrite(ledPin, HIGH);
-      delay(33);
-      digitalWrite(ledPin, LOW);
-      delay(33);
-    }
-    if (incomingByte == 'D') {
-      Serial.println('D');
-      digitalWrite(ledPin, HIGH);
-      delay(3000);
-      digitalWrite(ledPin, LOW);
-      delay(100);
-    }
-    if (incomingByte == 'A') {
-      Serial.println('A');
-      digitalWrite(ledPin, HIGH);
-      delay(50);
-      digitalWrite(ledPin, LOW);
-      delay(50);
-    }
-    if (incomingByte == 'T') {
-      Serial.println('T');
+      for (int i=0; i <= 6; i++){
+      //Serial.println("Blinking ");
+
       digitalWrite(ledPin, HIGH);
       delay(100);
       digitalWrite(ledPin, LOW);
       delay(100);
+      }
     }
+
   }
 }
 
